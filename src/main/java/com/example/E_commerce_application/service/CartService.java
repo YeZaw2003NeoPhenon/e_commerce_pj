@@ -34,12 +34,11 @@ public class CartService {
 
     private final EntityConverter<Product, ProductDto> productConverter;
 
-
     @Transactional
     public void addItemToCart(Long userId, Long productId, int quantity) {
 
         User user = userDao.findById(userId)
-                                 .orElseThrow(() -> new UserNotFoundException("User not found!"));
+                           .orElseThrow(() -> new UserNotFoundException("User not found!"));
 
         Product product = productDao.findById(productId).orElseThrow(() -> new ProductNotFoundException("Product not found!"));
 
@@ -98,22 +97,27 @@ public class CartService {
     public List<CartItemDto> getCartItems(Long userId){
         User user = userDao.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found!"));
         Cart cart = user.getCart();
+
         if(cart == null){
             throw new RuntimeException("Cart not found");
         }
+
          return cart.getCartItems()
                     .stream()
                     .map(cartItem -> {
                       CartItemDto cartItemDto = cartItemConverter.entityToDto(cartItem, CartItemDto.class);
                       Product product = cartItem.getProduct();
+
                       if(product != null){
-                         ProductDto productDto = productConverter.entityToDto(product, ProductDto.class);
-                         cartItemDto.setProductDto(productDto);
+                            ProductDto productDto = productConverter.entityToDto(product, ProductDto.class);
+                            cartItemDto.setProductDto(productDto);
                       }
+
                       return cartItemDto;
                     })
                     .collect(Collectors.toList());
     }
+
 
     public BigDecimal calculateCartTotal(Long userId){
        List<CartItemDto> cartItems = getCartItems(userId);

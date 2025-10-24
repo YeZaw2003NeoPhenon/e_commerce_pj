@@ -53,7 +53,7 @@ public class Cart {
 
     @Override
     public int hashCode() {
-        return 31; // or Objects.hash(id);
+        return 31;
     }
 
     @Override
