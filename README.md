@@ -20,9 +20,9 @@
 - JPA / Hibernate
 - JUnit5 + Mockito
 
-### Database ER Diagram
+### Database ER Diagrams
 ![Database Schema](./src/designs/ECommerce.drawio.svg)
-
+![Entities Schema]("./src/designs/E-commerce_application.drawio.png")
 
 ### Contributing
 
