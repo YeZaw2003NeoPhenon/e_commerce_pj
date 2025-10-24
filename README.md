@@ -22,7 +22,7 @@
 
 ### Database ER Diagrams
 ![Database Schema](./src/designs/ECommerce.drawio.svg)
-![Entities Schema]("./src/designs/E-commerce_application.drawio.png")
+![Entities Schema](./src/designs/Ecommerce_entities_diagram.drawio.svg)
 
 ### Contributing
 
