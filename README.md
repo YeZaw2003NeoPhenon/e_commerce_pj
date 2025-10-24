@@ -20,7 +20,8 @@
 - JPA / Hibernate
 - JUnit5 + Mockito
 
-
+### Database ER Diagram
+![Database Schema](file:///C:/Users/Lenovo/Downloads/ECommerce.drawio.svg)
 ### Contributing
 
 ## Fork the Repository:
