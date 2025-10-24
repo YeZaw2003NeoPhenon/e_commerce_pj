@@ -21,7 +21,7 @@
 - JUnit5 + Mockito
 
 ### Database ER Diagram
-![Database Schema](./designs/ECommerce.drawio.svg)
+![Database Schema](./src/designs/ECommerce.drawio.svg)
 
 
 ### Contributing
