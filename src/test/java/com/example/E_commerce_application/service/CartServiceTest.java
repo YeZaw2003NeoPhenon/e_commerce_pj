@@ -58,13 +58,14 @@ class CartServiceTest {
     @Test
     void testAddItemToCart_IfItemExists(){
         Long userId = 1L;
+        Long cartId = 5L;
         Long productId = 10L;
 
         User user = new User();
         user.setId(userId);
 
         Cart cart = new Cart();
-        cart.setId(productId);
+        cart.setId(cartId);
         cart.setCartItems(new ArrayList<>());
 
         Product product = new Product();

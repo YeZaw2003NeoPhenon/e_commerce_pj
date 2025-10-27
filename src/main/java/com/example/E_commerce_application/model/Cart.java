@@ -1,6 +1,5 @@
 package com.example.E_commerce_application.model;
 
-import com.example.E_commerce_application.dto.UserDto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;

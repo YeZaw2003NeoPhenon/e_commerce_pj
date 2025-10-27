@@ -16,7 +16,6 @@ public class CategoryService {
     private final CategoryDao categoryDao;
     private final EntityConverter<Category,CategoryDto> categoryConverter;
 
-
     public CategoryDto createCategory(CategoryDto categoryDto) {
         Category category = categoryConverter.dtoToEntity(categoryDto, Category.class);
         categoryDao.save(category);

@@ -40,5 +40,12 @@ public class Product {
     @UpdateTimestamp
     private LocalDate updatedAt;
 
+    public Product(String name, String description, BigDecimal price, Integer stockQuantity, Category category) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+        this.category = category;
+    }
 
 }

@@ -70,7 +70,7 @@ public class CartService {
     @Transactional
     public void removeItemFromCart(Long userId, Long productId){
         User user = userDao.findById(userId)
-                                 .orElseThrow(() -> new UserNotFoundException("User not found!"));
+                           .orElseThrow(() -> new UserNotFoundException("User not found!"));
 
         Cart cart = user.getCart();
 
@@ -117,7 +117,6 @@ public class CartService {
                     })
                     .collect(Collectors.toList());
     }
-
 
     public BigDecimal calculateCartTotal(Long userId){
        List<CartItemDto> cartItems = getCartItems(userId);
